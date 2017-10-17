@@ -30,7 +30,7 @@ alias g=git
 
 ### Номер 5
 
-`sudo grep -lr /etc -e #.*$(whoami).* 2> /dev/null`
+`sudo grep -lr /etc -e \#.*\ $(whoami)\ .* 2> /dev/null`
 
 ### Номер 6
 

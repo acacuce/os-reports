@@ -34,7 +34,7 @@ alias g=git
 
 ### Номер 6
 
-`sudo find / -type d 2> /dev/null | awk '{print gsub("/","/"), $0}' | sort -r | cut -d ' ' -f 2`
+`sudo find / -type d 2> /dev/null | awk '{print gsub("/","/"), $0}' | sort -r | cut -d ' ' -f 2 | head -n 1`
 
 ### Номер 7
 

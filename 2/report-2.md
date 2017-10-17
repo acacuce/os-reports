@@ -44,7 +44,6 @@ alias g=git
 #! /bin/bash
 
 MY_NAME=$(who | grep $(whoami) | head -n 1 | cut -d ' ' -f 1)
-
 MY_TERMINAL=$(who | grep $(whoami) | head -n 1 | cut -d ' ' -f 4)
 
 if [ ! -f /tmp/last-visit ]; then
@@ -53,9 +52,6 @@ if [ ! -f /tmp/last-visit ]; then
 fi
 
 who | cut -d ' ' -f 1 | sort | uniq > /tmp/current-visit
-
-echo ${MY_NAME}
-echo ${MY_TERMINAL}
 
 diff /tmp/last-visit /tmp/current-visit | grep \> | who | cut -d ' ' -f 1 | sort | uniq | write $MY_NAME $MY_TERMINAL
 
